@@ -1,6 +1,54 @@
 # Python的语法规则
 
+默认情况下，Python 3 源码文件以 **UTF-8** 编码。
 
+## 标识符
+
+- 第一个字符必须是字母表中字母或下划线 **_** 。
+- 标识符的其他的部分由字母、数字和下划线组成。
+- 标识符对大小写敏感。
+
+## python保留字
+
+保留字即关键字，我们不能把它们用作任何标识符名称。Python 的标准库提供了一个 keyword 模块，可以输出当前版本的所有关键字：
+
+``` python
+import keyword
+
+print(keyword.kwlist)
+```
+
+输出：
+
+``` bash
+E:\workspace\Python\Python-study\code\test_1st\venv\Scripts\python.exe E:/workspace/Python/Python-study/code/test_1st/keywords.py
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+```
+
+## 注释
+
+Python中单行注释以 **#** 开头,多行注释可以用多个 **#** 号，还有 **'''** 和 **"""**：
+
+``` python
+# 第一个注释
+# 第二个注释
+ 
+'''
+第三注释
+第四注释
+'''
+ 
+"""
+第五注释
+第六注释
+"""
+```
+
+## 行与缩进
+
+python最具特色的就是使用缩进来表示代码块，不需要使用大括号 **{}** 。
+
+缩进的空格数是可变的，但是同一个代码块的语句必须包含相同的缩进空格数。
 
 ``` python
 # 注释：第一个python程序
@@ -20,6 +68,23 @@ if 10 - 9 > 0:
 * `#`  注释行
 * `import`  关键字用来导入模块
 * Python 中四个空格缩进代表此代码块属于上一句（缩进少四个空格）闭包内。
+
+## 多行语句
+
+Python 通常是一行写完一条语句，但如果语句很长，我们可以使用反斜杠(\)来实现多行语句，例如：
+
+```python
+total = item_one + \
+        item_two + \
+        item_three
+```
+
+在 [], {}, 或 () 中的多行语句，不需要使用反斜杠(\)，例如：
+
+```python
+total = ['item_one', 'item_two', 'item_three',
+        'item_four', 'item_five']
+```
 
 
 
